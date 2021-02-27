@@ -42,8 +42,8 @@ public class EasyTimer {
         timer.fireDate = .distantFuture
     }
     
-    public func resume() {
-        timer.fireDate = .init()
+    public func resume(_ afterDelay: TimeInterval = 0) {
+        timer.fireDate = .init(timeIntervalSinceNow: afterDelay)
     }
 }
 
